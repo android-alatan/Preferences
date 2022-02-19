@@ -1,0 +1,64 @@
+[versions]
+androidAnnotation = "1.1.0"
+moshi = "1.13.0"
+javaX = "1"
+kotlinPoet = "1.8.0"
+ksp = "1.6.10-1.0.3"
+kotlin = { prefer = "1.6.10" }
+agp = "7.1.1"
+junit5 = "5.8.2"
+detekt = "1.19.0"
+kotlinDsl = "2.2.0"
+mavenPublish = "0.18.0"
+jacoco = "0.8.7"
+jsonParser = "0.1.0"
+androidBuildTool = "32.0.0"
+androidCompile = "32"
+targetSdk = "32"
+minSdk = "21"
+rxjava = "3.1.1"
+coroutine = "1.5.0"
+
+
+[libraries]
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshiCompiler = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+androidAnnotation = { module = "androidx.annotation:annotation", version.ref = "androidAnnotation" }
+javaX = { module = "javax.inject:javax.inject", version.ref = "javaX" }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinPoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinPoet" }
+ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+kspProcessingApi = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
+
+# test
+junit5 = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
+jupiterEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+jupiterVintage = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+jacoco = { module = "org.jacoco:org.jacoco.core", version.ref = "jacoco" }
+mockito = { module = "org.mockito:mockito-core", version = "2.23.4" }
+mockitoKotlin = { module = "org.mockito.kotlin:mockito-kotlin", version = "4.0.0" }
+turbine = { module = "app.cash.turbine:turbine", version = "0.7.0" }
+coroutineTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
+
+
+# android-alatn
+jsonParser-api = { module = "com.github.android-alatan.JsonParser:json-parser-api", version.ref = "jsonParser" }
+jsonParser-impl = { module = "com.github.android-alatan.JsonParser:json-parser", version.ref = "jsonParser" }
+jsonParser-factory = { module = "com.github.android-alatan.JsonParser:moshi-adapter-factory", version.ref = "jsonParser" }
+jsonParser-ksp = { module = "com.github.android-alatan.JsonParser:moshi-adapter-factory-ksp", version.ref = "jsonParser" }
+
+
+[plugins]
+#agp = { id = "com.android.tools.build", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+androidApp = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish" }

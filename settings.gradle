@@ -1,0 +1,18 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = "https://jitpack.io"
+            content {
+                includeGroupByRegex("com\\.github\\.android-alatan.*")
+            }
+        }
+
+    }
+}
+rootProject.name = "Preferences"
+include "preferences-adapter-api", "preferences-annotation"
+include "preferences-builder", "preferences-adapter-rx", "preferences-adapter-flow"
+include "coroutine-test-util"
