@@ -55,7 +55,7 @@ class RxGetAdapter(
                 emitter.onNext(it as T)
             }
             registerCallback(key, callback = callback)
-            getValue(key) ?: emitter.onNext(defaultValue)
+            getValue(key) ?: defaultValue?.let { emitter.onNext(defaultValue) }
             emitter.setCancellable {
                 unregisterCallback(key, callback)
             }

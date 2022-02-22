@@ -30,7 +30,7 @@ class FlowGetAdapter(
                 trySend(it as T)
             }
             registerCallback(key, callback = callback)
-            getValue(key) ?: trySend(defaultValue)
+            getValue(key) ?: defaultValue?.let { trySend(defaultValue) }
             awaitClose {
                 unregisterCallback(key, callback)
             }

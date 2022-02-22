@@ -5,6 +5,7 @@ plugins {
     id("code-quality")
     id("lib-tasks")
     kotlin("android")
+    id("libs-detekt")
 }
 
 val versionCatalog = project.extensions.getByType<VersionCatalogsExtension>()

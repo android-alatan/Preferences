@@ -7,6 +7,7 @@ import java.lang.reflect.Type
 
 internal class DefaultSetAdapter : SetAdapter {
     override fun acceptable(returnType: Type): Boolean = when (returnType) {
+        Boolean::class.java,
         Unit::class.java,
         Void::class.java,
         Void.TYPE -> true
