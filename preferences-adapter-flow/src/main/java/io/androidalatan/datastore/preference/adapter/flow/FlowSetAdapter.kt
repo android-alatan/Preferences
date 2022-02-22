@@ -35,7 +35,6 @@ class FlowSetAdapter(private val coroutineContext: CoroutineContext) : SetAdapte
                 sharedPreferences.unregisterOnSharedPreferenceChangeListener(listener)
             }
         }.flowOn(coroutineContext)
-
     }
 
     private fun registerForOnetime(
@@ -46,11 +45,9 @@ class FlowSetAdapter(private val coroutineContext: CoroutineContext) : SetAdapte
             override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
                 sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
                 notified.invoke()
-
             }
         }
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)
         return onSharedPreferenceChangeListener
     }
-
 }

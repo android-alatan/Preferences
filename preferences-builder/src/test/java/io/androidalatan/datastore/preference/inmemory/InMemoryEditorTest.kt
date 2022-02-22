@@ -185,7 +185,6 @@ class InMemoryEditorTest {
             key4 to value4,
             key5 to value5,
         ), commitedValues)
-
     }
 
     @Test
@@ -222,7 +221,5 @@ class InMemoryEditorTest {
             key4 to value4,
             key5 to value5,
         ), commitedValues)
-
     }
-
 }

@@ -15,7 +15,6 @@ class FlowGetAdapterTest {
             Assertions.assertTrue(acceptable(Flow::class.java))
             Assertions.assertFalse(acceptable(Boolean::class.java))
         }
-
     }
 
     @Test

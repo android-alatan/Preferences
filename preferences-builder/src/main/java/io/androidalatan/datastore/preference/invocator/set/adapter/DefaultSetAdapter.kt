@@ -43,11 +43,9 @@ internal class DefaultSetAdapter : SetAdapter {
             override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
                 sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
                 notified.invoke()
-
             }
         }
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)
         return onSharedPreferenceChangeListener
     }
-
 }

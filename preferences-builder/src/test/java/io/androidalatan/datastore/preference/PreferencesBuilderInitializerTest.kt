@@ -41,6 +41,5 @@ class PreferencesBuilderInitializerTest {
         Assertions.assertEquals(PreferencesBuilderInitializer.setAdapterFactories, setAdapters)
         Assertions.assertEquals(PreferencesBuilderInitializer.getAdapterFactories, getAdapters)
         Assertions.assertEquals(PreferencesBuilderInitializer.clearAdapterFactories, clearAdapters)
-
     }
 }

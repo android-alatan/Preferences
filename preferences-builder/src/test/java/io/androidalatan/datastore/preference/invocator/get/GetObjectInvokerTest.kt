@@ -58,7 +58,6 @@ class GetObjectInvokerTest {
             .assertNoErrors()
             .assertNotComplete()
             .dispose()
-
     }
 
     @Test
@@ -98,7 +97,6 @@ class GetObjectInvokerTest {
             DefaultGetAdapter(valueObserver), emptyList()
         )
 
-
         Assertions.assertNull(invoker.execute(emptyArray()))
 
         valueObserver.updateValue(TestGetObjectPref.KEY_PERSON, TestPersonObj(MOCK_NAME_1))
@@ -133,7 +131,6 @@ class GetObjectInvokerTest {
         Assertions.assertNotNull(result2)
         Assertions.assertTrue(result2 is TestPersonObj)
         Assertions.assertEquals(MOCK_NAME_2, (result2 as TestPersonObj).name)
-
     }
 
     interface TestGetObjectPref {

@@ -68,7 +68,6 @@ class SetInvokerTest {
             DefaultSetAdapter(), listOf(RxSetAdapter(Schedulers.trampoline()))
         )
 
-
         Assertions.assertEquals("", pref.getString(SetPrefTest.KEY_TITLE, ""))
 
         val value = "name"
@@ -95,7 +94,6 @@ class SetInvokerTest {
             DefaultSetAdapter(), listOf(RxSetAdapter(Schedulers.trampoline()))
         )
 
-
         Assertions.assertEquals("", pref.getString(SetPrefTest.KEY_TITLE, ""))
 
         val value = "name"
@@ -120,7 +118,6 @@ class SetInvokerTest {
             pref, method, jsonParser, annotation, valueObserver,
             DefaultSetAdapter(), listOf(RxSetAdapter(Schedulers.trampoline()))
         )
-
 
         Assertions.assertEquals("", pref.getString(SetPrefTest.KEY_TITLE, ""))
 
@@ -147,7 +144,6 @@ class SetInvokerTest {
             DefaultSetAdapter(), listOf(FlowSetAdapter(Dispatchers.Unconfined))
         )
 
-
         Assertions.assertEquals("", pref.getString(SetPrefTest.KEY_TITLE, ""))
 
         val value = "name"
@@ -173,7 +169,6 @@ class SetInvokerTest {
             pref, method, jsonParser, annotation, valueObserver,
             DefaultSetAdapter(), listOf(DefaultSetAdapter())
         )
-
 
         Assertions.assertEquals("", pref.getString(SetPrefTest.KEY_TITLE, ""))
 

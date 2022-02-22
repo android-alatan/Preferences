@@ -35,7 +35,6 @@ class RxClearAdapter(private val scheduler: Scheduler) : ClearAdapter {
                     emitter.setCancellable {
                         sharedPreferences.unregisterOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)
                     }
-
                 }
                     .subscribeOn(scheduler)
             }
@@ -99,11 +98,9 @@ class RxClearAdapter(private val scheduler: Scheduler) : ClearAdapter {
                     sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
                     notified.invoke(sharedPreferences)
                 }
-
             }
         }
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)
         return onSharedPreferenceChangeListener
     }
-
 }

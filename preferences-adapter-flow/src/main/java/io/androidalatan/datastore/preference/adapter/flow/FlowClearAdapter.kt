@@ -41,11 +41,9 @@ class FlowClearAdapter(private val coroutineContext: CoroutineContext) : ClearAd
                     sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
                     notified.invoke(sharedPreferences)
                 }
-
             }
         }
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)
         return onSharedPreferenceChangeListener
     }
-
 }

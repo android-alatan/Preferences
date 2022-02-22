@@ -31,7 +31,6 @@ class SetInvoker(
                     jsonParser
                 )
             }
-
     }
 
     private fun updateValue(

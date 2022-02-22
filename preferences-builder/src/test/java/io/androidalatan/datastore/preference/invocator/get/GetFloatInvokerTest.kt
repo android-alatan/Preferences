@@ -117,9 +117,7 @@ class GetFloatInvokerTest {
                 valueObserver.updateValue(GetFloatPrefTest.KEY_TITLE, newValue)
                 Assertions.assertEquals(2f, it.awaitItem())
             }
-
     }
-
 
     @Test
     fun `execute Float`() {
@@ -166,7 +164,6 @@ class GetFloatInvokerTest {
             invoker.execute(emptyArray())
         }
     }
-
 }
 
 interface GetFloatPrefTest {

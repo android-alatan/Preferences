@@ -52,7 +52,6 @@ interface Invoker {
                 is Clear -> ClearInvoker(sharedPreferences, method, valueObserver, defaultClearAdapter, clearAdapters)
                 else -> throw IllegalAccessException("${method.name} has wrong declaration with ${annotation.annotationClass}")
             }
-
         }
     }
 }

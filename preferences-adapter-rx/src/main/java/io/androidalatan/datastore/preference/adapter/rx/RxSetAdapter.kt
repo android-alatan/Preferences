@@ -88,7 +88,6 @@ class RxSetAdapter(private val scheduler: Scheduler) : SetAdapter {
             override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
                 sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
                 notified.invoke()
-
             }
         }
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)

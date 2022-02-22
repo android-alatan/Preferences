@@ -56,7 +56,6 @@ class InMemoryPreference : SharedPreferences {
                 val arrayList = ArrayList(callbacks)
                 arrayList.forEach { it.onSharedPreferenceChanged(this, key) }
             }
-
         }
     }
 

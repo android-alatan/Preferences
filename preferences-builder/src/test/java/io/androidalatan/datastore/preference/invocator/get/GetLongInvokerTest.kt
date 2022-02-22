@@ -125,9 +125,7 @@ class GetLongInvokerTest {
                 val newValue = 2L
                 valueObserver.updateValue(GetBooleanPrefTest.KEY_TITLE, newValue)
                 Assertions.assertEquals(2L, it.awaitItem())
-
             }
-
     }
 
     @Test
