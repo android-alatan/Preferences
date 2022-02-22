@@ -51,7 +51,6 @@ class ValueObserverImpl : ValueObserver {
                     .forEach { callback ->
                         callback.onUpdate(newValue)
                     }
-
             }
         } ?: kotlin.run {
             map.remove(key)

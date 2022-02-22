@@ -12,7 +12,7 @@ class DefaultSetAdapterTest {
     @Test
     fun isAcceptable() {
         Assertions.assertTrue(adapter.acceptable(Boolean::class.java))
-        Assertions.assertTrue(adapter.acceptable(String::class.java))
+        Assertions.assertFalse(adapter.acceptable(String::class.java))
     }
 
     @Test

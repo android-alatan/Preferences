@@ -29,6 +29,4 @@ class PreferencesBuilderTest {
     }
 }
 
-interface DataStoreInterface {
-
-}
+interface DataStoreInterface

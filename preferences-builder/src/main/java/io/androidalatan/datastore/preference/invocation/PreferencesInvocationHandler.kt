@@ -38,7 +38,7 @@ class PreferencesInvocationHandler(
     private val defaultClearAdapter by lazy { DefaultClearAdapter() }
     private val setAdapters: List<SetAdapter> by lazy { setAdapterFactories.map { it.create() } }
     private val getAdapters: List<GetAdapter> by lazy { getAdapterFactories.map { it.create(valueObserver) } }
-    private val clearAdapters: List<ClearAdapter> by lazy {clearAdapterFactories.map { it.create() }  }
+    private val clearAdapters: List<ClearAdapter> by lazy { clearAdapterFactories.map { it.create() } }
 
     override fun invoke(proxy: Any, method: Method, args: Array<Any>?): Any? {
 

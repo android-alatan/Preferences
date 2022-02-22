@@ -13,43 +13,36 @@ class InMemoryEditor(private val callback: (String, Any?, Boolean) -> Unit) : Sh
     override fun putStringSet(key: String, values: MutableSet<String>?): SharedPreferences.Editor {
         targets[key] = values ?: emptySet<String>()
         return this
-
     }
 
     override fun putInt(key: String, value: Int): SharedPreferences.Editor {
         targets[key] = value
         return this
-
     }
 
     override fun putLong(key: String, value: Long): SharedPreferences.Editor {
         targets[key] = value
         return this
-
     }
 
     override fun putFloat(key: String, value: Float): SharedPreferences.Editor {
         targets[key] = value
         return this
-
     }
 
     override fun putBoolean(key: String, value: Boolean): SharedPreferences.Editor {
         targets[key] = value
         return this
-
     }
 
     override fun remove(key: String): SharedPreferences.Editor {
         targets[key] = null
         return this
-
     }
 
     override fun clear(): SharedPreferences.Editor {
         cleared = true
         return this
-
     }
 
     override fun commit(): Boolean {
@@ -61,7 +54,6 @@ class InMemoryEditor(private val callback: (String, Any?, Boolean) -> Unit) : Sh
         }
         targets.clear()
         return true
-
     }
 
     override fun apply() {

@@ -124,9 +124,7 @@ class GetStringInvokerTest {
                 val newValue = "false"
                 valueObserver.updateValue(GetBooleanPrefTest.KEY_TITLE, newValue)
                 Assertions.assertEquals("false", it.awaitItem())
-
             }
-
     }
 
     @Test
@@ -180,7 +178,6 @@ class GetStringInvokerTest {
             invoker.execute(emptyArray())
         }
     }
-
 }
 
 interface GetStringPrefTest {

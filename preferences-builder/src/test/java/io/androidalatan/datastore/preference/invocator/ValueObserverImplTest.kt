@@ -16,7 +16,6 @@ class ValueObserverImplTest {
         val value = VALUE_1
         observer.updateValue(key, value)
         Assertions.assertEquals(value, observer.getValue(key))
-
     }
 
     @Test

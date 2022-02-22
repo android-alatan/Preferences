@@ -26,5 +26,4 @@ class DefaultClearAdapter : ClearAdapter {
             else -> false
         }
     }
-
 }

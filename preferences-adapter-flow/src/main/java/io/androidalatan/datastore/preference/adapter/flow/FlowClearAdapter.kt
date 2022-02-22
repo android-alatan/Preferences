@@ -6,6 +6,7 @@ import io.androidalatan.datastore.preference.adapter.api.ValueObserver
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.flowOn
 import kotlin.coroutines.CoroutineContext
 
 class FlowClearAdapter(private val coroutineContext: CoroutineContext) : ClearAdapter {
@@ -40,11 +41,9 @@ class FlowClearAdapter(private val coroutineContext: CoroutineContext) : ClearAd
                     sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
                     notified.invoke(sharedPreferences)
                 }
-
             }
         }
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener)
         return onSharedPreferenceChangeListener
     }
-
 }

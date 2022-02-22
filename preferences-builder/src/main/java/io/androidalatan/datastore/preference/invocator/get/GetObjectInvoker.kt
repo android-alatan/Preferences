@@ -74,5 +74,4 @@ class GetObjectInvoker(
             method.returnType
         }.let { jsonParser.getRawType(it) }
     }
-
 }

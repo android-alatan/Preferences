@@ -42,7 +42,6 @@ class RxClearAdapterTest {
             .assertNoErrors()
             .assertComplete()
             .dispose()
-
     }
 
     @Test
@@ -54,7 +53,6 @@ class RxClearAdapterTest {
             .assertNoErrors()
             .assertComplete()
             .dispose()
-
     }
 
     @Test
@@ -70,7 +68,6 @@ class RxClearAdapterTest {
             .assertNoErrors()
             .assertComplete()
             .dispose()
-
     }
 
     @Test
@@ -81,7 +78,5 @@ class RxClearAdapterTest {
             .assertNoErrors()
             .assertComplete()
             .dispose()
-
     }
-
 }

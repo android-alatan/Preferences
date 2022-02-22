@@ -12,6 +12,7 @@ dependencies {
 tasks.withType<io.gitlab.arturbosch.detekt.Detekt> {
     jvmTarget = "1.8"
 
+    autoCorrect = true
     config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
     reports {
         file("$rootDir/build/reports/detekt/${project.name}/").mkdirs()

@@ -66,7 +66,6 @@ class InMemoryPreferenceTest {
         Assertions.assertEquals(value2, preference.getInt(key2, 0))
         val defValue = 1
         Assertions.assertEquals(defValue, preference.getInt(key1, defValue))
-
     }
 
     @Test
@@ -84,7 +83,6 @@ class InMemoryPreferenceTest {
         Assertions.assertEquals(value2, preference.getLong(key2, 0))
         val defValue = 3L
         Assertions.assertEquals(defValue, preference.getLong(key1, defValue))
-
     }
 
     @Test
@@ -102,7 +100,6 @@ class InMemoryPreferenceTest {
         Assertions.assertEquals(value2, preference.getFloat(key2, 0f))
         val defValue = 3f
         Assertions.assertEquals(defValue, preference.getFloat(key1, defValue))
-
     }
 
     @Test
@@ -182,5 +179,4 @@ class InMemoryPreferenceTest {
         preference.unregisterOnSharedPreferenceChangeListener(listener)
         Assertions.assertEquals(0, preference.callbacks.size)
     }
-
 }

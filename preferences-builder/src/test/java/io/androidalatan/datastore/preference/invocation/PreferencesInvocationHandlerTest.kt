@@ -113,7 +113,6 @@ class PreferencesInvocationHandlerTest {
     companion object {
         private const val MOCK_NAME = "mock-name"
     }
-
 }
 
 interface PrefTest {

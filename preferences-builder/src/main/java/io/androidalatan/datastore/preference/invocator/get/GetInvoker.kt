@@ -1,6 +1,8 @@
 package io.androidalatan.datastore.preference.invocator.get
 
 import android.content.SharedPreferences
+import io.androidalatan.datastore.preference.adapter.api.GetAdapter
+import io.androidalatan.datastore.preference.adapter.api.ValueObserver
 import io.androidalatan.datastore.preference.annotations.getter.GetBoolean
 import io.androidalatan.datastore.preference.annotations.getter.GetFloat
 import io.androidalatan.datastore.preference.annotations.getter.GetInt
@@ -8,8 +10,6 @@ import io.androidalatan.datastore.preference.annotations.getter.GetLong
 import io.androidalatan.datastore.preference.annotations.getter.GetObject
 import io.androidalatan.datastore.preference.annotations.getter.GetString
 import io.androidalatan.datastore.preference.invocator.Invoker
-import io.androidalatan.datastore.preference.adapter.api.GetAdapter
-import io.androidalatan.datastore.preference.adapter.api.ValueObserver
 import io.androidalatan.jsonparser.api.JsonParser
 import java.lang.reflect.Method
 import java.lang.reflect.ParameterizedType
@@ -124,7 +124,7 @@ abstract class GetInvoker<T : Any>(
             defaultGetAdapter: GetAdapter,
             getAdapters: List<GetAdapter>
         ): GetInvoker<Float> {
-            return GetFloatInvoker(sharedPreferences, method, valueObserver, annotate,defaultGetAdapter, getAdapters)
+            return GetFloatInvoker(sharedPreferences, method, valueObserver, annotate, defaultGetAdapter, getAdapters)
         }
 
         fun string(
@@ -149,6 +149,5 @@ abstract class GetInvoker<T : Any>(
         ): Invoker {
             return GetObjectInvoker(sharedPreferences, method, jsonParser, valueObserver, annotate, defaultGetAdapter, getAdapters)
         }
-
     }
 }

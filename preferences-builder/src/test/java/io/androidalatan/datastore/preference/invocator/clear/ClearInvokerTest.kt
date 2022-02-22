@@ -45,7 +45,6 @@ class ClearInvokerTest {
 
         Assertions.assertNull(valueObserver.getValue(KEY_TITLE))
         Assertions.assertTrue(sharedPreferences.values.isEmpty())
-
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -77,7 +76,6 @@ class ClearInvokerTest {
 
         Assertions.assertNull(valueObserver.getValue(KEY_TITLE))
         Assertions.assertTrue(sharedPreferences.values.isEmpty())
-
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -107,7 +105,6 @@ class ClearInvokerTest {
 
         Assertions.assertNull(valueObserver.getValue(KEY_TITLE))
         Assertions.assertTrue(sharedPreferences.values.isEmpty())
-
     }
 
     @Test
@@ -131,7 +128,6 @@ class ClearInvokerTest {
 
         Assertions.assertNull(valueObserver.getValue(KEY_TITLE))
         Assertions.assertTrue(sharedPreferences.values.isEmpty())
-
     }
 
     companion object {
@@ -154,5 +150,4 @@ interface ClearPrefTest {
 
     @Clear
     fun clearSync()
-
 }
