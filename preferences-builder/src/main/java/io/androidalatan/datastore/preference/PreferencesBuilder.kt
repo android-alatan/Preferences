@@ -1,6 +1,5 @@
 package io.androidalatan.datastore.preference
 
-import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import io.androidalatan.datastore.preference.inmemory.InMemoryPreference
@@ -9,7 +8,7 @@ import io.androidalatan.jsonparser.api.JsonParser
 import java.lang.reflect.Proxy
 
 class PreferencesBuilder(
-    private val application: Application? = null,
+    private val context: Context? = null,
 ) {
 
     internal var name = ""
@@ -36,9 +35,9 @@ class PreferencesBuilder(
             throw IllegalArgumentException("${clazz.simpleName} should be interface")
         }
 
-        val preference: Lazy<SharedPreferences> = if (application != null) {
+        val preference: Lazy<SharedPreferences> = if (context != null) {
             val actualName = name.takeIf { it.isNotEmpty() } ?: clazz.canonicalName
-            lazy { application.getSharedPreferences(actualName, mode) }
+            lazy { context.getSharedPreferences(actualName, mode) }
         } else {
             // in case of test
             lazy { InMemoryPreference() }
