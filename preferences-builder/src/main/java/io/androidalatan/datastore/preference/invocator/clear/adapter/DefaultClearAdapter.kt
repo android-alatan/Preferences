@@ -4,7 +4,7 @@ import android.content.SharedPreferences
 import io.androidalatan.datastore.preference.adapter.api.ClearAdapter
 import io.androidalatan.datastore.preference.adapter.api.ValueObserver
 
-class DefaultClearAdapter : ClearAdapter {
+internal class DefaultClearAdapter : ClearAdapter {
     override fun adapt(returnType: Class<*>, sharedPreferences: SharedPreferences, valueObserver: ValueObserver): Any? {
         sharedPreferences.edit()
             .clear()
