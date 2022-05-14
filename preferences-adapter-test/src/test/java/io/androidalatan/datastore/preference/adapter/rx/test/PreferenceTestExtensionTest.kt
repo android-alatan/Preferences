@@ -53,9 +53,6 @@ class PreferenceTestExtensionTest {
 
                 Assertions.assertEquals(newTitle, flowTurbine.awaitItem())
             }
-
-
-
     }
 }
 
@@ -86,6 +83,5 @@ interface PrefTest {
 
     companion object {
         private const val KEY_TITLE = "1dhas"
-        private const val KEY_PERSON = "asdjh8"
     }
 }
