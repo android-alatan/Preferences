@@ -13,6 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Preferences"
-include "preferences-adapter-api", "preferences-annotation"
-include "preferences-builder", "preferences-adapter-rx", "preferences-adapter-flow"
-include "coroutine-test-util"
+include ":preferences-adapter-api", ":preferences-annotation"
+include ":preferences-builder", ":preferences-adapter-rx", ":preferences-adapter-flow"
+include ":preferences-adapter-test"
+include ":coroutine-test-util"
